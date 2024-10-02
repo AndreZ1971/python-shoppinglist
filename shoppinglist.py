@@ -7,3 +7,13 @@ def add_item():
     shoppinglist.append(item)
     print(f"'{item}' wurde der Einkaufsliste hinzugefügt.")
 
+
+# Funktion zur Anzeige der Einkaufsliste
+def show_shoppinglist():
+    if shoppinglist:
+        print("Deine Einkaufsliste:")
+        for item in shoppinglist:
+            print(f"- {item}")
+    else:
+        print("Deine Einkaufsliste ist leer.")
+
