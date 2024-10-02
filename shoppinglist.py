@@ -17,3 +17,22 @@ def show_shoppinglist():
     else:
         print("Deine Einkaufsliste ist leer.")
 
+
+# Hauptprogramm
+def main():
+    while True:
+        print("\n----- Einkaufsliste -----")
+        print("1. Artikel zur Einkaufsliste hinzufügen")
+        print("2. Einkaufsliste anzeigen")
+        print("3. Programm beenden")
+        choice = input("Wähle eine Option (1, 2, 3): ")
+        
+        if choice == "1":
+            add_item()
+        elif choice == "2":
+            show_shoppinglist()
+        elif choice == "3":
+            print("Programm wird beendet! Auf Wiedersehen.")
+            break
+        else:
+            print("Ungültige Auswahl. Bitte wähle 1, 2 oder 3.")
