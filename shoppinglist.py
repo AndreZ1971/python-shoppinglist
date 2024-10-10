@@ -97,6 +97,5 @@ def main():
 if __name__ == "__main__":
     main()
 
-# Verbindung zur Datenbank schließen, wenn das Programm beendet wird
-conn.close()
+
 
