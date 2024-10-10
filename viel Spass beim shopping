@@ -1,0 +1,47 @@
+import time
+import os
+
+
+def clear_screen():
+    
+    if os.name == 'nt':  
+        os.system('cls')
+    else:  
+        os.system('clear')
+
+
+def countdown(seconds):
+    clear_screen()  
+    print("Das Gerät zerstört sich in...")
+    while seconds > 0:
+        print(f"{seconds} Sekunden verbleiben!")
+        time.sleep(1)  
+        clear_screen()  
+        seconds -= 1
+    print("Boom! Gerät zerstört (zumindest metaphorisch).")
+
+
+def main():
+    while True:
+        print("\n----- Einkaufsliste -----")
+        print("1. Artikel in die Einkaufsliste eintragen")
+        print("2. Zeig mir, was ich holen soll.")
+        print("3. Programm beenden")
+        choice = input("Du hast die Wahl zwischen: (1, 2, 3): ")
+        
+        if choice == "1":
+            add_item()
+        elif choice == "2":
+            show_shoppinglist()
+        elif choice == "3":
+            print("Auf Wiedersehen!")
+            countdown(30)  
+            break
+        else:
+            print("Das war falsch. Du hast die Wahl zwischen: 1, 2 oder 3.")
+
+
+
+if __name__ == "__main__":
+    main()
+
